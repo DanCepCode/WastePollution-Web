@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f5ed" />
+  <meta name="description" content="A student project exploring waste pollution and the small actions that can make a difference." />
+  <title>Small Acts, Cleaner Places</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Small Acts home">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span>small acts<span class="brand-dot">.</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">Our project</a>
+      <a href="#questionnaire">Questionnaire</a>
+      <a class="nav-join" href="#photo-wall">Share a clean-up <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="photo-rail rail-left" aria-label="Clean-up moments">
+        <figure class="photo-card card-one"><img src="https://images.unsplash.com/photo-1532996122724-a3c354a0b15b?auto=format&fit=crop&w=520&q=85" alt="Hands sorting recyclable materials" /><figcaption>Every bit counts <span>01</span></figcaption></figure>
+        <figure class="photo-card card-two"><img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?auto=format&fit=crop&w=520&q=85" alt="A green landscape cared for by its community" /><figcaption>Care for our home <span>02</span></figcaption></figure>
+      </div>
+      <div class="photo-rail rail-right" aria-label="Nature worth protecting">
+        <figure class="photo-card card-three"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=520&q=85" alt="Green hills beneath a soft morning sky" /><figcaption>A little more alive <span>03</span></figcaption></figure>
+        <figure class="photo-card card-four"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=520&q=85" alt="Sunlight through a quiet forest" /><figcaption>Keep it beautiful <span>04</span></figcaption></figure>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> IGCSE GLOBAL PERSPECTIVES <span class="eyebrow-line"></span></p>
+        <h1 id="hero-title">A cleaner world<br />starts <em>somewhere.</em></h1>
+        <p class="hero-lede">Small acts. Shared stories. A little less waste.</p>
+        <a class="button button-dark" href="#questionnaire">Be part of the change <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="note-spark">✳</span> A student project about waste, people &amp; the places we share</div>
+      </div>
+      <div class="hero-orbit orbit-a" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-b" aria-hidden="true"></div>
+      <div class="scroll-cue" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="about-section section-shell" id="about" aria-labelledby="about-title">
+      <div class="section-kicker"><span>01</span><span class="kicker-rule"></span><span>THE PROJECT</span></div>
+      <div class="about-grid">
+        <div><h2 id="about-title">A space for<br /><em>your perspective.</em></h2></div>
+        <div class="intro-placeholder">
+          <span class="placeholder-label"><span class="edit-dot"></span> YOUR INTRODUCTION</span>
+          <p>Your introduction goes here. Add your project background, what inspired you to explore waste pollution, and the questions you hope to answer.</p>
+          <span class="placeholder-hint">Replace this text with your own introduction when you’re ready.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="survey-section" id="questionnaire" aria-labelledby="survey-title">
+      <div class="survey-inner">
+        <div class="section-kicker light"><span>02</span><span class="kicker-rule"></span><span>HAVE YOUR SAY</span></div>
+        <div class="survey-content">
+          <div><p class="survey-overline">A FEW MINUTES. A BIGGER PICTURE.</p><h2 id="survey-title">What does waste<br />look like <em>to you?</em></h2><p class="survey-copy">Share your thoughts in our short questionnaire. Every response helps us understand the issue from more points of view.</p></div>
+          <div class="survey-action"><a class="button button-cream" id="survey-link" href="#questionnaire">Take the questionnaire <span aria-hidden="true">↗</span></a><p id="survey-note">Opens in a new tab.</p></div>
+        </div>
+        <span class="survey-decoration" aria-hidden="true">✳</span>
+      </div>
+    </section>
+
+    <section class="photo-section section-shell" id="photo-wall" aria-labelledby="photo-title">
+      <div class="section-kicker"><span>03</span><span class="kicker-rule"></span><span>COMMUNITY PHOTO WALL</span></div>
+      <div class="photo-heading"><div><h2 id="photo-title">Show us your<br /><em>small act.</em></h2><p>Picked up litter? Joined a clean-up? Give that moment a little space to shine.</p></div><span class="wall-stamp" aria-hidden="true">OUR<br />PLANET<br /><b>♡</b></span></div>
+
+      <div class="upload-panel">
+        <form id="photo-form">
+          <label class="upload-drop" for="photo-input" id="upload-drop">
+            <span class="upload-icon" aria-hidden="true">＋</span>
+            <span class="upload-title">Choose a photo</span>
+            <span class="upload-subtitle">JPG, PNG or WEBP · up to 8 MB</span>
+            <input id="photo-input" name="photo" type="file" accept="image/jpeg,image/png,image/webp" />
+          </label>
+          <div class="upload-fields">
+            <label class="field-label" for="photo-caption">A few words about your moment <span>(optional)</span></label>
+            <input class="caption-input" id="photo-caption" name="caption" type="text" maxlength="100" placeholder="e.g. Our Saturday park clean-up" />
+            <label class="consent"><input id="photo-consent" type="checkbox" /><span class="checkmark" aria-hidden="true"></span><span>I have permission to share this photo, and everyone pictured is happy for it to appear here.</span></label>
+            <button class="button button-dark submit-photo" id="publish-button" type="submit" disabled>Add to the photo wall <span aria-hidden="true">↗</span></button>
+            <p class="privacy-note">Photos and captions are public once shared. Please post only images you have permission to share.</p>
+            <p class="photo-status" id="photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+      <div class="wall-header"><span>THE PHOTO WALL</span><span id="photo-count">YOUR MOMENTS WILL APPEAR HERE</span></div>
+      <div class="photo-wall-grid" id="photo-grid" aria-live="polite">
+        <div class="wall-empty" id="wall-empty"><span aria-hidden="true">✳</span><p>Good things grow when we do them together.</p><small>Your shared moments will show up here.</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">✳</span><span>small acts<span class="brand-dot">.</span></span></a>
+    <p>One planet. Many perspectives. <span>Made for an IGCSE Global Perspectives project.</span></p>
+    <a href="#top" class="back-top">BACK TO TOP ↑</a>
+  </footer>
+</body>
+</html>
