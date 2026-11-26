@@ -49,10 +49,8 @@ create policy "waste_photo_public_submit"
     and storage_path ~ '^[0-9a-f-]{36}\.(jpg|png|webp)$'
   );
 
+-- Public bucket URLs work without exposing Storage object listings.
 drop policy if exists "waste_photo_storage_public_list" on storage.objects;
-create policy "waste_photo_storage_public_list"
-  on storage.objects for select to anon
-  using (bucket_id = 'clean-up-photos');
 
 drop policy if exists "waste_photo_storage_public_upload" on storage.objects;
 create policy "waste_photo_storage_public_upload"
